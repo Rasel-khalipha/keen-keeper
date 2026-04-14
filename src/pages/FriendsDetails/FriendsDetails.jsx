@@ -35,8 +35,8 @@ const FriendsDetails = () => {
 	return (
 		<>
 			<div className="w-[73.4%] mx-auto py-20">
-				<div className=" flex items-center gap-6">
-					<div className="w-[350px]">
+				<div className=" flex flex-col lg:flex-row items-center gap-6">
+					<div className="w-full md:max-w-[350px]">
 						<FriendDetailsCardLeft
 							name={name}
 							picture={picture}
@@ -46,7 +46,7 @@ const FriendsDetails = () => {
 							bio={bio}
 						/>
 					</div>
-					<div className="w-[736px]">
+					<div className="max-w-[736px]">
 						<FriendDetailsCardRight
 							next_due_date={next_due_date}
 							goal={goal}

@@ -16,7 +16,7 @@ const FriendDetailsCardRight = ({
 		<>
 			<div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center">
+					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center w-full">
 						<h3 className="font-semibold text-2xl text-[#244D3F]">
 							{days_since_contact}
 						</h3>
@@ -24,11 +24,11 @@ const FriendDetailsCardRight = ({
 							Days Since Contact
 						</p>
 					</div>
-					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center">
+					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center w-full">
 						<h3 className="font-semibold text-2xl text-[#244D3F]">{goal}</h3>
 						<p className="font-normal text-lg text-[#64748B]">Goal (Days)</p>
 					</div>
-					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center">
+					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center w-full">
 						<h3 className="font-semibold text-2xl text-[#244D3F]">
 							{next_due_date}
 						</h3>

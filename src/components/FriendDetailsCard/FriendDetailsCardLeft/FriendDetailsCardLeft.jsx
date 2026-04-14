@@ -51,7 +51,7 @@ const FriendDetailsCardLeft = ({ name, picture, status, tags, bio, email }) => {
 						</p>
 					</div>
 				</div>
-				<div className="flex justify-center items-center py-4 px-24.5 gap-2 bg-white shadow-sm font-medium text-base text-[#1F2937] border border-[#E9E9E9] rounded-sm mb-2 mt-2">
+				<div className="flex justify-center items-center py-4 px-15 lg:px-24.5 gap-2 bg-white shadow-sm font-medium text-base text-[#1F2937] border border-[#E9E9E9] rounded-sm mb-2 mt-2">
 					<RiNotificationSnoozeLine /> Snooze 2 Weeks
 				</div>
 				<div className="flex justify-center items-center py-4 px-24.5 gap-2 bg-white shadow-sm font-medium text-base text-[#1F2937] border border-[#E9E9E9] rounded-sm mb-2">
