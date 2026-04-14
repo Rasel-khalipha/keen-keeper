@@ -21,7 +21,7 @@ const HomePage = () => {
 						Add Friend
 					</button>
 				</div>
-				<div className="grid grid-cols-4 gap-6 mt-10 mb-10">
+				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 mb-10">
 					<div className="p-8 bg-white rounded-lg shadow-sm border border-[#ffffff] text-center">
 						<h3 className="font-semibold text-[2rem] text-[#244D3F]">
 							{friends.length}
