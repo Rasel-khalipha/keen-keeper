@@ -1,12 +1,18 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import Card from "../ui/CardUi/Card";
 
-const AllFriends = () => {
-	const friends = useLoaderData();
+const AllFriends = ({ friends }) => {
 	console.log(friends);
+
 	return (
 		<>
-			<div>AllFriends</div>
+			<div className="grid grid-cols-4 gap-6">
+				{friends.map((friend) => (
+					<div key={friend.id}>
+						<Card friend={friend} />
+					</div>
+				))}
+			</div>
 		</>
 	);
 };

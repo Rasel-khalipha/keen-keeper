@@ -53,8 +53,8 @@ const HomePage = () => {
 					<h2 className="font-semibold text-2xl text-[#1F2937] mb-4">
 						Your Friends
 					</h2>
-					<div>
-						<AllFriends />
+					<div className="mb-20">
+						<AllFriends friends={friends} />
 					</div>
 				</div>
 			</div>
