@@ -3,9 +3,13 @@ import React from "react";
 const Card = ({ friend }) => {
 	return (
 		<>
-			<div className="card bg-white shadow-sm pt-6">
-				<figure className="w-20 h-20 rounded-full mx-auto">
-					<img src={friend.picture} alt="Shoes" />
+			<div className="card bg-white shadow-sm pt-6 h-full flex flex-col">
+				<figure className="w-20 h-20 overflow-hidden rounded-full mx-auto">
+					<img
+						src={friend.picture}
+						alt={friend.name}
+						className="w-full h-full object-cover"
+					/>
 				</figure>
 				<div className="card-body justify-center text-center">
 					<h2 className="card-title justify-center">{friend.name}</h2>

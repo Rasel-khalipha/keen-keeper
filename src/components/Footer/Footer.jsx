@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<>
 			<div className="bg-[#244D3F] pt-20">
-				<footer className="footer footer-horizontal footer-center text-primary-content px-10 gap-6  w-[73%] mx-auto">
+				<footer className="footer footer-horizontal footer-center text-primary-content px-10 gap-6 w-full md:w-[73%] mx-auto">
 					<aside className="">
 						<img src={footerImg} alt="footerImg" />
 						<p className="font-normal text-base mt-4">
@@ -41,11 +41,11 @@ const Footer = () => {
 						</div>
 					</nav>
 
-					<div className="w-full flex flex-col md:flex-row justify-between items-center border-t border-[#1A8862]/20 py-7.5 mt-10">
+					<div className="w-full flex flex-col md:flex-row justify-between items-center border-t border-[#1A8862]/20 py-7.5 mt-10 gap-10">
 						<p className="text-[#FAFAFA]/50 font-normal text-base">
 							&copy; {new Date().getFullYear()} - All right reserved
 						</p>
-						<nav className="text-[#FAFAFA]/50 font-normal text-base flex flex-col md:flex-row items-center gap-5 md:gap-15">
+						<nav className="text-[#FAFAFA]/50 font-normal text-base flex flex-col md:flex-row items-center gap-2 md:gap-15">
 							<Link to={"/"}>Privacy Policy</Link>
 							<Link to={"/"}>Terms of Service</Link>
 							<Link to={"/"}>Cookies</Link>
