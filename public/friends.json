@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"name": "James Carter",
+		"picture": "https://i.pravatar.cc/300?u=james-carter",
+		"email": "james.carter@gmail.com",
+		"days_since_contact": 18,
+		"status": "overdue",
+		"tags": ["college", "close friend"],
+		"bio": "College friend from New York. We studied computer science and worked on multiple hackathons together.",
+		"goal": 14,
+		"next_due_date": "2025-07-10"
+	},
+	{
+		"id": 2,
+		"name": "Emma Wilson",
+		"picture": "https://i.pravatar.cc/300?u=emma-wilson",
+		"email": "emma.wilson@gmail.com",
+		"days_since_contact": 12,
+		"status": "almost due",
+		"tags": ["university", "study partner"],
+		"bio": "Met at university in London. We collaborated on AI and machine learning projects.",
+		"goal": 14,
+		"next_due_date": "2025-07-20"
+	},
+	{
+		"id": 3,
+		"name": "Liam Johnson",
+		"picture": "https://i.pravatar.cc/300?u=liam-johnson",
+		"email": "liam.johnson@gmail.com",
+		"days_since_contact": 5,
+		"status": "on-track",
+		"tags": ["office", "developer"],
+		"bio": "Software engineer colleague from Berlin. We often discuss React and system design.",
+		"goal": 14,
+		"next_due_date": "2025-07-30"
+	},
+	{
+		"id": 4,
+		"name": "Sophia Brown",
+		"picture": "https://i.pravatar.cc/300?u=sophia-brown",
+		"email": "sophia.brown@gmail.com",
+		"days_since_contact": 20,
+		"status": "overdue",
+		"tags": ["neighbor", "family friend"],
+		"bio": "Neighbor from Toronto. Our families have been close for years and celebrate holidays together.",
+		"goal": 14,
+		"next_due_date": "2025-07-08"
+	},
+	{
+		"id": 5,
+		"name": "Noah Davis",
+		"picture": "https://i.pravatar.cc/300?u=noah-davis",
+		"email": "noah.davis@gmail.com",
+		"days_since_contact": 13,
+		"status": "almost due",
+		"tags": ["gym", "fitness"],
+		"bio": "Gym partner in Los Angeles. We train together and track fitness goals.",
+		"goal": 14,
+		"next_due_date": "2025-07-19"
+	},
+	{
+		"id": 6,
+		"name": "Olivia Martinez",
+		"picture": "https://i.pravatar.cc/300?u=olivia-martinez",
+		"email": "olivia.martinez@gmail.com",
+		"days_since_contact": 7,
+		"status": "on-track",
+		"tags": ["freelance", "designer"],
+		"bio": "Freelance UI/UX designer from Spain. We worked together on multiple SaaS dashboards.",
+		"goal": 14,
+		"next_due_date": "2025-07-27"
+	},
+	{
+		"id": 7,
+		"name": "Ethan Miller",
+		"picture": "https://i.pravatar.cc/300?u=ethan-miller",
+		"email": "ethan.miller@gmail.com",
+		"days_since_contact": 16,
+		"status": "overdue",
+		"tags": ["business", "startup"],
+		"bio": "Startup founder from San Francisco. We share ideas about SaaS growth and marketing.",
+		"goal": 14,
+		"next_due_date": "2025-07-12"
+	},
+	{
+		"id": 8,
+		"name": "Isabella Taylor",
+		"picture": "https://i.pravatar.cc/300?u=isabella-taylor",
+		"email": "isabella.taylor@gmail.com",
+		"days_since_contact": 11,
+		"status": "almost due",
+		"tags": ["college", "friend"],
+		"bio": "College friend from Paris. We studied design and love traveling across Europe.",
+		"goal": 14,
+		"next_due_date": "2025-07-21"
+	},
+	{
+		"id": 9,
+		"name": "Lucas Anderson",
+		"picture": "https://i.pravatar.cc/300?u=lucas-anderson",
+		"email": "lucas.anderson@gmail.com",
+		"days_since_contact": 3,
+		"status": "on-track",
+		"tags": ["gaming", "online friend"],
+		"bio": "Online gaming friend from Sweden. We play competitive multiplayer games regularly.",
+		"goal": 14,
+		"next_due_date": "2025-08-01"
+	},
+	{
+		"id": 10,
+		"name": "Mia Thompson",
+		"picture": "https://i.pravatar.cc/300?u=mia-thompson",
+		"email": "mia.thompson@gmail.com",
+		"days_since_contact": 19,
+		"status": "overdue",
+		"tags": ["mentor", "career"],
+		"bio": "Career mentor from Chicago. Helped me improve my frontend and career direction.",
+		"goal": 14,
+		"next_due_date": "2025-07-09"
+	}
+]
