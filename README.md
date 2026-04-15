@@ -50,6 +50,10 @@ Automatically categorize contacts (e.g., active, overdue) based on last interact
 
 ![Home](./public/HomePage.png)
 
+### Details Page
+
+![Details](./public/DetailsPage.png)
+
 ### Timeline Page
 
 ![Timeline](./public/TimelinePage.png)
