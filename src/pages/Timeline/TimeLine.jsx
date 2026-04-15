@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FriendContext } from "../../context/FriendContext/FriendContext";
 import TimelineCall from "../../components/timelineDetails/TimelineCall/TimelineCall";
 import TimelineMessage from "../../components/timelineDetails/TimelineMessage/TimelineMessage";
@@ -8,6 +8,8 @@ import { FaAngleDown } from "react-icons/fa6";
 const TimeLine = () => {
 	const { voiceCall, message, videoCall } = useContext(FriendContext);
 
+	const [filterType, setFilterType] = useState("");
+
 	const today = new Date();
 
 	const formattedDate = today.toLocaleDateString("en-US", {
@@ -16,12 +18,16 @@ const TimeLine = () => {
 		day: "numeric",
 	});
 
-	// Combine all events (calls + messages) into a single timeline
-	const timelineEvents = [
+	const allTimelineEvents = [
 		...voiceCall.map((call) => ({ ...call, type: "call" })),
 		...message.map((msg) => ({ ...msg, type: "message" })),
 		...videoCall.map((vdo) => ({ ...vdo, type: "video" })),
 	].sort((a, b) => a.id - b.id);
+
+	
+	const timelineEvents = filterType
+		? allTimelineEvents.filter((event) => event.type === filterType)
+		: allTimelineEvents;
 
 	return (
 		<>
@@ -33,20 +39,34 @@ const TimeLine = () => {
 						role="button"
 						className="btn m-1 max-w-[347px] flex justify-between font-normal text-lg text-[#64748B]"
 					>
-						Filter timeline <FaAngleDown />
+						{filterType ? (
+							<>
+								{filterType === "call"
+									? "Call"
+									: filterType === "message"
+										? "Text"
+										: "Video"}
+							</>
+						) : (
+							"Filter timeline"
+						)}{" "}
+						<FaAngleDown />
 					</div>
 					<ul
 						tabIndex="-1"
 						className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
 					>
 						<li>
-							<a>Call</a>
+							<a onClick={() => setFilterType("")}>All</a>
 						</li>
 						<li>
-							<a>Text</a>
+							<a onClick={() => setFilterType("call")}>Call</a>
 						</li>
 						<li>
-							<a>Video</a>
+							<a onClick={() => setFilterType("message")}>Text</a>
+						</li>
+						<li>
+							<a onClick={() => setFilterType("video")}>Video</a>
 						</li>
 					</ul>
 				</div>
