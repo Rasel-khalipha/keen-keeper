@@ -24,7 +24,6 @@ const TimeLine = () => {
 		...videoCall.map((vdo) => ({ ...vdo, type: "video" })),
 	].sort((a, b) => a.id - b.id);
 
-	
 	const timelineEvents = filterType
 		? allTimelineEvents.filter((event) => event.type === filterType)
 		: allTimelineEvents;
@@ -37,7 +36,7 @@ const TimeLine = () => {
 					<div
 						tabIndex={0}
 						role="button"
-						className="btn m-1 max-w-[347px] flex justify-between font-normal text-lg text-[#64748B]"
+						className="btn m-1 w-full lg:w-[200%] flex justify-between font-normal text-lg text-[#64748B]"
 					>
 						{filterType ? (
 							<>
