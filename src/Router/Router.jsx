@@ -1,40 +1,62 @@
 import { createBrowserRouter } from "react-router";
-import HomePage from "../pages/HomePage/HomePage";
 import RootLayout from "../layout/RootLayout";
-import TimeLine from "../pages/Timeline/TimeLine";
-import Stats from "../pages/Stats/Stats";
-import FriendsDetails from "../pages/FriendsDetails/FriendsDetails";
 import { Atom } from "react-loading-indicators";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+
+const hydrateFallback = (
+	<div className="min-h-screen flex items-center justify-center bg-white">
+		<Atom color="#244D3F" size="medium" text="" textColor="" />
+	</div>
+);
 
 export const router = createBrowserRouter([
 	{
 		path: "/",
 		Component: RootLayout,
-		hydrateFallbackElement: (
-			<div className="min-h-screen flex items-center justify-center bg-white">
-				<Atom color="#32cd32" size="medium" text="" textColor="" />
-			</div>
-		),
+		hydrateFallbackElement: hydrateFallback,
 		children: [
 			{
 				index: true,
-				Component: HomePage,
+				lazy: async () => {
+					const module = await import("../pages/HomePage/HomePage");
+					return { Component: module.default };
+				},
 				loader: async () => {
 					const res = await fetch("/friends.json");
 					return res.json();
 				},
+				hydrateFallbackElement: hydrateFallback,
 			},
 			{
 				path: "/friendDetails/:id",
-				Component: FriendsDetails,
+				lazy: async () => {
+					const module = await import("../pages/FriendsDetails/FriendsDetails");
+					return { Component: module.default };
+				},
 				loader: async () => {
 					const res = await fetch("/friends.json");
 					return res.json();
 				},
+				hydrateFallbackElement: hydrateFallback,
 			},
 
-			{ path: "/timeline", Component: TimeLine },
-			{ path: "/stats", Component: Stats },
+			{
+				path: "/timeline",
+				lazy: async () => {
+					const module = await import("../pages/Timeline/TimeLine");
+					return { Component: module.default };
+				},
+				hydrateFallbackElement: hydrateFallback,
+			},
+			{
+				path: "/stats",
+				lazy: async () => {
+					const module = await import("../pages/Stats/Stats");
+					return { Component: module.default };
+				},
+				hydrateFallbackElement: hydrateFallback,
+			},
 		],
+		errorElement: <ErrorPage />,
 	},
 ]);

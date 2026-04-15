@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
 import FriendDetailsCardLeft from "../../components/FriendDetailsCard/FriendDetailsCardLeft/FriendDetailsCardLeft";
 import FriendDetailsCardRight from "../../components/FriendDetailsCard/FriendDetailsCardRight/FriendDetailsCardRight";
+import { FriendContext } from "../../context/FriendContext/FriendContext";
 
 const FriendsDetails = () => {
 	const { id } = useParams();
 	const friends = useLoaderData();
 	const expectedFriend = friends.find((friend) => friend.id === parseInt(id));
-	console.log(expectedFriend, "expectedFriend");
+
+	const { handleCall, handleMessage, handleVideoCall } =
+		useContext(FriendContext);
 
 	const {
 		name,
@@ -52,6 +55,10 @@ const FriendsDetails = () => {
 							goal={goal}
 							days_since_contact={days_since_contact}
 							last_contacted={last_contacted}
+							handleCall={handleCall}
+							expectedFriend={expectedFriend}
+							handleMessage={handleMessage}
+							handleVideoCall={handleVideoCall}
 						/>
 					</div>
 				</div>

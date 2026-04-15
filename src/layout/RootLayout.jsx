@@ -11,7 +11,7 @@ const RootLayout = () => {
 			<div>
 				{navigation.state === "loading" && (
 					<div className="fixed inset-0 flex justify-center items-center bg-white/60 z-50">
-						<Atom color="#32cd32" size="medium" text="" textColor="" />
+						<Atom color="#244D3F" size="medium" text="" textColor="" />
 					</div>
 				)}
 				<Navbar />

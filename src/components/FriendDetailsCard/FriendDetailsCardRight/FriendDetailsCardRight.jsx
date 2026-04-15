@@ -8,6 +8,10 @@ const FriendDetailsCardRight = ({
 	next_due_date,
 	goal,
 	last_contacted,
+	handleCall,
+	expectedFriend,
+	handleMessage,
+	handleVideoCall
 }) => {
 	const last = new Date(last_contacted);
 	const due = new Date(next_due_date);
@@ -59,15 +63,24 @@ const FriendDetailsCardRight = ({
 						Quick Check-In
 					</h3>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-						<div className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center">
+						<div
+							onClick={() => handleCall(expectedFriend)}
+							className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center cursor-pointer"
+						>
 							<PiPhoneCallBold className="w-6.5 h-6.5 text-[#1F2937] mx-auto mb-2.5" />
 							<p className="font-normal text-lg text-[#1F2937]">Call</p>
 						</div>
-						<div className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center">
+						<div
+							onClick={() => handleMessage(expectedFriend)}
+							className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center cursor-pointer"
+						>
 							<RiMessage2Line className="w-6.5 h-6.5 text-[#1F2937] mx-auto mb-2.5" />
 							<p className="font-normal text-lg text-[#1F2937]">Text</p>
 						</div>
-						<div className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center">
+						<div
+							onClick={() => handleVideoCall(expectedFriend)}
+							className="bg-[#F8FAFC] p-4 shadow-sm rounded-lg text-center cursor-pointer"
+						>
 							<LuVideo className="w-6.5 h-6.5 text-[#1F2937] mx-auto mb-2.5" />
 							<p className="font-normal text-lg text-[#1F2937]">Video</p>
 						</div>
